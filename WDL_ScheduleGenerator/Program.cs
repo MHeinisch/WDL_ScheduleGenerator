@@ -10,8 +10,21 @@ namespace WDL_ScheduleGenerator
     {
         static void Main(string[] args)
         {
-            LeagueSchedule ls = new LeagueSchedule();
-            ls.GenerateLeagueSchedule();
+            LeagueSchedule ls = null;
+            Random rng = null;
+            bool scheduleComplete = false;
+            int overallAttemptCounter = 1;            
+
+            while(!scheduleComplete)
+            {
+                rng = new Random(100000 * overallAttemptCounter);
+                ls = new LeagueSchedule();
+                scheduleComplete = ls.GenerateLeagueSchedule(rng);
+                overallAttemptCounter++;
+            }
+            Console.WriteLine($"\nCOMPLETED ENTIRE SCHEDULE in {overallAttemptCounter} attempts.\n");
+
+            ls.DisplayLeagueSchedule();
         }
     }
 }
