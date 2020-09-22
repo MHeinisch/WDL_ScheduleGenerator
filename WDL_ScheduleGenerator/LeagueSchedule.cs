@@ -101,12 +101,5 @@ namespace WDL_ScheduleGenerator
 
             Console.ReadLine();
         }
-
-        //private List<Team> GetTeamsList()
-        //{
-        //    List<Team> teams = teamNumberByTeamLeagueSchedule.Values.OrderBy(t => t.teamNumber).ToList();
-        //    return teams;
-        //}
-
     }
 }

@@ -17,12 +17,12 @@ namespace WDL_ScheduleGenerator
 
             while(!scheduleComplete)
             {
-                rng = new Random(100000 * overallAttemptCounter);
+                rng = new Random();
                 ls = new LeagueSchedule();
                 scheduleComplete = ls.GenerateLeagueSchedule(rng);
                 overallAttemptCounter++;
             }
-            Console.WriteLine($"\nCOMPLETED ENTIRE SCHEDULE in {overallAttemptCounter} attempts.\n");
+            Console.WriteLine($"\nCOMPLETED ENTIRE SCHEDULE in {overallAttemptCounter} attempts.\n\n");
 
             ls.DisplayLeagueSchedule();
         }

@@ -140,7 +140,7 @@ namespace WDL_ScheduleGenerator
 
         public void DisplaySchedule(SortedDictionary<int, Team> allTeams)
         {
-            Console.WriteLine("Schedule for " + managerName + ":");
+            Console.WriteLine("\n\nSchedule for " + managerName + ":");
 
             for (int i = 1; i <= weekNumberByOpposingTeamNumber.Count; i++)
             {
